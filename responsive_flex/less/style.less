@@ -1,0 +1,395 @@
+//out:../css/styles.css, sourcemap:true, compress:true
+@violet: #bc3183;
+@olive: #0ca0b6;
+@black: #373c3f;
+@purple: #5b0fa1;
+@grey: #ebebeb;
+@text-color-main: #5b5b5b;
+@text-color-purple: #9585a4;
+@text-color-olive: #88d3dd;
+@text-color-olive--dark: #088ca5;
+@html-size-base: 14px;
+@font-size: 1.3rem;
+@font-size--h1: 4.4rem; //3.14
+@font-size--h2: 2.14rem;
+@font-family: Montserrat, Myraid Pro, Trebuchet MS, sans-serif;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: @html-size-base;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1024px;
+  margin: auto;
+  font-family: @font-family;
+  font-size: @font-size;
+  color: @text-color-main;
+}
+h1 {
+  font-size: @font-size--h1;
+  color: #fff;
+}
+h2 {
+  font-size: @font-size--h2;
+  color: #fff;
+}
+.arrow {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  transform: rotate(45deg);
+}
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  &__top {
+    width: 100%;
+    flex-grow: 1;
+  }
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 576px;
+    width: 100%;
+    padding-left: 7%;
+    padding-right: 23%;
+    background-color: #0ca0b6;
+    h1 {
+      margin-bottom: 40px;
+      padding: 0;
+      flex-grow: 1;
+    }
+    h2 {
+      margin: 0;
+      color: @text-color-olive;
+    }
+    .arrow {
+      margin-top: 0;
+      margin-left: auto;
+    }
+  }
+  &__slogan {
+    height: 240px;
+    width: 77%;
+    background-color: @black;
+    color: @text-color-purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      padding: 10px;
+      color: @text-color-purple;
+    }
+  }
+  &__more {
+    width: 23%;
+    background-color: @violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+      width: 20px;
+      height: 20px;
+      border-top: 7px solid #fff;
+      border-right: 7px solid #fff;
+    }
+  }
+}
+.page-main {
+  display: flex;
+  flex-wrap: wrap;
+  &__more {
+    width: 33.33%;
+    height: 292px;
+    background-color: @purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+      width: 17px;
+      height: 17px;
+      border-top: 6px solid #fff;
+      border-right: 6px solid #fff;
+    }
+  }
+  &__first-image {
+    width: 33.33%;
+    height: 292px;
+    background: url("../img/bridge_1024.png") no-repeat;
+    background-position: 50% 50%;
+  }
+  &__second-image {
+    width: 33.33%;
+    height: 292px;
+    background: url("../img/girl_1024.png") no-repeat;
+    background-position: 50% 50%;
+  }
+}
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 75px 8% 90px;
+  background-color: @grey;
+  & h2 {
+    width: 100%;
+    flex-grow: 1;
+    color: @text-color-olive--dark;
+  }
+  &__first-paragraph,
+  &__second-paragraph {
+    width: 45%;
+  }
+  &__first-paragraph {
+    margin-right: 10%;
+  }
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: @black;
+  padding: 20px;
+  &__menu {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+      flex-grow: 1;
+      margin-right: 30px;
+      color: #fff;
+    }
+  }
+
+  &__button {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    max-width: 640px;
+    font-family: @font-family;
+    font-size: @font-size;
+    color: @text-color-main;
+    h1 {
+      font-size: @font-size--h1/2;
+      color: #fff;
+    }
+    h2 {
+      font-size: @font-size--h2/2;
+      color: #fff;
+    }
+  }
+  .page-header {
+    &__logo {
+      height: 350px;
+      h1 {
+        margin-bottom: 20px;
+      }
+      .arrow {
+        width: 10px;
+        height: 10px;
+        border-top: 4px solid #fff;
+        border-right: 4px solid #fff;
+      }
+    }
+    &__slogan {
+      height: 150px;
+    }
+    &__more {
+      .arrow {
+        width: 15px;
+        height: 15px;
+        border-top: 5px solid #fff;
+        border-right: 5px solid #fff;
+      }
+    }
+  }
+  .page-main {
+    &__more {
+      width: 100%;
+      height: 550px;
+      .arrow {
+        width: 17px;
+        height: 17px;
+        border-top: 6px solid #fff;
+        border-right: 6px solid #fff;
+      }
+    }
+    &__first-image {
+      width: 100%;
+      height: 550px;
+      background: url("../img/bridge_640.png") no-repeat;
+      background-position: 50% 50%;
+    }
+    &__second-image {
+      width: 100%;
+      height: 550px;
+      background: url("../img/girl_640.png") no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+  .page-footer {
+    padding: 75px 11% 90px;
+    & h2 {
+      width: 100%;
+      flex-grow: 1;
+    }
+    &__first-paragraph,
+    &__second-paragraph {
+      width: 100%;
+    }
+    &__first-paragraph {
+      margin-right: 0;
+    }
+  }
+  .main-nav {
+    padding: 10px;
+    &__menu {
+      display: none;
+    }
+    &__button {
+      background: #fff;
+      outline: none;
+      border: none;
+      background: transparent;
+      display: block;
+      cursor: pointer;
+
+      span {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+      }
+
+      span::before {
+        top: 5px;
+      }
+      span::after {
+        top: -5px;
+      }
+      span::before, span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  body {
+    max-width: 320px;
+    font-family: @font-family;
+    font-size: @font-size;
+    color: @text-color-main;
+    h1 {
+      font-size: @font-size--h1/3.5;
+      color: #fff;
+    }
+    h2 {
+      font-size: @font-size--h2/3.5;
+      color: #fff;
+    }
+  }
+  .page-header {
+    &__logo {
+      height: 175px;
+      h1 {
+        margin-bottom: 15px;
+      }
+      .arrow {
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+      }
+    }
+    &__slogan {
+      height: 75px;
+    }
+    &__more {
+      .arrow {
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+      }
+    }
+  }
+  .page-main {
+    &__more {
+      width: 100%;
+      height: 274px;
+      .arrow {
+        width: 15px;
+        height: 15px;
+        border-top: 5px solid #fff;
+        border-right: 5px solid #fff;
+      }
+    }
+    &__first-image {
+      width: 100%;
+      height: 274px;
+      background: url("../img/bridge_320.png") no-repeat;
+      background-position: 50% 50%;
+    }
+    &__second-image {
+      width: 100%;
+      height: 274px;
+      background: url("../img/girl_320.png") no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+  .page-footer {
+    padding: 27px 11% 45px;
+    & h2 {
+      width: 100%;
+      font-size: @font-size--h2/2;
+      flex-grow: 1;
+    }
+    &__first-paragraph,
+    &__second-paragraph {
+      width: 100%;
+    }
+    &__first-paragraph {
+      margin-right: 0;
+    }
+  }
+  .main-nav {
+    padding: 5px;
+    &__menu {
+      li {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.toggle-menu {
+  display: flex;
+}
