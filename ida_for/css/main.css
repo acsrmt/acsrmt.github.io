@@ -1,0 +1,341 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 10px;
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #373c43;
+}
+.btn,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'open_sansregular', Arial, sans-serif;
+}
+.left-block {
+  float: left;
+}
+.right-block {
+  float: right;
+}
+.main-wrap {
+  margin: 0 auto;
+  width: 960px;
+}
+@media (max-width: 767px) {
+  .main-wrap {
+    width: auto;
+  }
+}
+.main__left-block {
+  width: 33.3%;
+  float: left;
+}
+.main__right-block {
+  width: 66.6%;
+  float: left;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  outline: none;
+}
+.btn-submit {
+  width: 132px;
+  background-color: #3157b4;
+  color: #fff;
+}
+.btn-group {
+  padding: 15px;
+  margin-top: 25px;
+}
+@media (max-width: 480px) {
+  .btn-group {
+    text-align: right;
+  }
+}
+.info-note {
+  padding: 25px;
+  background-color: #3b3e45;
+  color: #7f838f;
+}
+.toggle {
+  display: block!important;
+}
+@media (max-width: 767px) {
+  .main__left-block,
+  .main__right-block {
+    width: 100%;
+  }
+}
+.main-nav {
+  position: relative;
+  min-height: 40px;
+  background: #191c24;
+  font-family: 'open_sansregular', Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: justify;
+}
+.main-nav__button {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .main-nav__button {
+    display: inline-block;
+  }
+}
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .main-nav__list {
+    display: none;
+  }
+}
+.main-nav__list.toggle {
+  padding-top: 40px;
+}
+.main-nav__item {
+  display: block;
+  white-space: nowrap;
+}
+.main-nav__link {
+  display: block;
+  padding: 25.6px 30px;
+  background-color: #191c24;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.main-nav__link:hover {
+  background-color: #1f2229;
+}
+.main-nav__link.active,
+.main-nav__link:active,
+.main-nav__link:focus {
+  color: #808592;
+  background-color: #2a2d37;
+}
+.main-nav__link.logout {
+  color: #808592;
+}
+.payment-card {
+  padding: 30px;
+  background-color: #f7f8f8;
+  color: #383d43;
+  font-family: Arial, sans-serif;
+  font-size: 1.33rem;
+  line-height: 1.75rem;
+}
+.payment-card__title {
+  display: inline-block;
+  width: 160px;
+  color: #8494ab;
+}
+.payment-card__title.main {
+  min-width: 160px;
+  width: auto;
+  margin-bottom: 15px;
+}
+.payment-card__title.row {
+  display: block;
+  width: auto;
+  margin-bottom: 3px;
+}
+.payment-card__row {
+  display: block;
+  margin-bottom: 12px;
+}
+@media (max-width: 410px) {
+  .payment-card__row {
+    float: none;
+  }
+}
+.payment-card__row.row-filled {
+  height: 40px;
+  margin: 5px -15px 15px;
+  background-color: #e5e8ed;
+}
+.payment-card__header {
+  font-size: 1.83rem;
+  line-height: 2.08rem;
+}
+.payment-card-form {
+  position: relative;
+}
+.payment-card-form__box {
+  width: 350px;
+  height: 234px;
+  padding: 20px 15px 4px;
+  background-color: #f7f8f8;
+  border: 1px solid #e5e8ed;
+  border-radius: 10px;
+}
+@media (max-width: 410px) {
+  .payment-card-form__box {
+    width: 100%;
+    height: 100%;
+  }
+}
+.payment-card-form__box.first {
+  position: relative;
+  z-index: 1;
+}
+.payment-card-form__box.second {
+  position: absolute;
+  width: 368px;
+  top: 20px;
+  left: 194px;
+}
+@media (max-width: 620px) {
+  .payment-card-form__box.second {
+    width: 350px;
+    margin-top: 20px;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+}
+@media (max-width: 410px) {
+  .payment-card-form__box.second {
+    width: 100%;
+    height: 100%;
+  }
+}
+.payment-card-form__input {
+  display: inline-block;
+  width: 65px;
+  height: 42px;
+  padding: 7px 5px 5px 12px;
+  margin-right: 9px;
+  background-color: #ffffff;
+  border: 1px solid #e4e9ee;
+  font-size: 1.33rem;
+}
+.payment-card-form__input:last-child {
+  margin-right: 0;
+}
+.payment-card-form__input.select-month {
+  width: 70px;
+}
+.payment-card-form__input.select-year {
+  width: 86px;
+}
+.payment-card-form__input.owner {
+  width: 319px;
+}
+@media (max-width: 767px) {
+  .payment-card-form__input.owner {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .payment-card-form__input.card-num {
+    margin-bottom: 4px;
+  }
+}
+.payment-card-form__input.code {
+  width: 138px;
+}
+.payment-card-form__input::-webkit-input-placeholder {
+  color: #bec6cf;
+}
+.payment-card-form__input:-moz-placeholder {
+  color: #bec6cf;
+}
+.payment-card-form__input:-ms-input-placeholder {
+  color: #bec6cf;
+}
+.payment-card-form__input::-moz-placeholder {
+  color: #bec6cf;
+}
+.payment-card-form .select-wrap {
+  display: inline-block;
+  position: relative;
+}
+.payment-card-form .select-wrap select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+  background-image: none;
+  color: #3b3e45;
+}
+.payment-card-form .select-wrap select::-ms-expand {
+  display: none;
+}
+.payment-card-form .select-wrap::after {
+  font-size: 26px;
+  line-height: 1;
+  color: #bec6cf;
+  font-family: "Ionicons";
+  content: "\f3d0";
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  pointer-events: none;
+}
+.payment-card-form .input-wrap {
+  position: relative;
+  display: inline-block;
+}
+.payment-card-form .input-wrap.has-feedback input {
+  padding-right: 30px;
+  margin-right: 0;
+}
+.payment-card-form .input-wrap-feedback {
+  font-size: 26px;
+  line-height: 1;
+  position: absolute;
+  color: #bec6cf;
+  right: 8px;
+  top: 8px;
+}
