@@ -19,7 +19,6 @@ document.getElementById('paymentForm').addEventListener('submit', function(e) {
     validate(document.paymentForm.CardCode, regexp_card_code);
     var cardNum = document.querySelectorAll('.card-num');
     for (var i = cardNum.length - 1; i >= 0; i--) {
-        console.log(i);
         validate(cardNum[i], regexp_card_num);
     }
 
@@ -33,6 +32,5 @@ document.getElementById('paymentForm').addEventListener('submit', function(e) {
             item.style.outline = 'none';
         }
     }
-    console.log("Всё ок");
     return true;
 });
