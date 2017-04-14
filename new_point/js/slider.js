@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         onDragEnd: function() {
             if (this.hitTest(dropArea, overlapThreshold)) {
                 pill.style.display = 'none';
-                dropArea.style.backgroundImage = 'url(/img/happy.png)';
+                dropArea.style.backgroundImage = 'url(../img/happy.png)';
                 dropArea.style.width = '835px';
                 toDefaultStay.classList.remove('hidden');
                 TweenLite.set('#draggable', {
