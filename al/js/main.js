@@ -36,4 +36,39 @@ $(function () {
   $('.search-close').on('click', function () {
     $('#navsearch-form').removeClass('open');
   });
+
+  var slider = document.getElementById('slider');
+
+  noUiSlider.create(slider, {
+    start: [1200, 1200000],
+    connect: true,
+    range: {
+      'min': 1200,
+      'max': 1200000
+    }
+  });
+
+  var maxValue = document.getElementById('price-max');
+  var minValue = document.getElementById('price-min');
+
+  slider.noUiSlider.on('update', function (values, handle) {
+
+    var value = values[handle];
+
+    if (handle) {
+      maxValue.value = Math.round(value).toLocaleString('ru-RU');
+    } else {
+      minValue.value = Math.round(value).toLocaleString('ru-RU');
+    }
+  });
+
+  minValue.addEventListener('input', function () {
+    console.log(parseInt(this.value.replace(/\s/g, ''), 10));
+    slider.noUiSlider.set([parseInt(this.value.replace(/\s/g, ''), 10), null]);
+  });
+
+  maxValue.addEventListener('input', function () {
+    console.log(parseInt(this.value.replace(/\s/g, ''), 10));
+    slider.noUiSlider.set([null, parseInt(this.value.replace(/\s/g, ''), 10)]);
+  });
 });
