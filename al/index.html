@@ -15,7 +15,7 @@
   <![endif]-->
 </head>
 
-<body class="page-home">
+<body class="">
   <header class="page-header">
     <nav class="navbar">
   <div class="container">
@@ -62,133 +62,240 @@
 
   </header>
   <div class="page-content">
-    <div class="main-grow"></div>
-    <section class="container">
+    <div class="container">
+  <ul class="nav">
+    <li class="nav-item"><a class="nav-link" href="#">Перила</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Поручни</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Ограждения</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Перегородки</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Пергола</a></li>
+    <li class="nav-item active"><a class="nav-link" href="#">Уличные фонари</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Козырьки</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Вся продукция</a></li>
+  </ul>
+</div>
+
+    <div class="container category-desc">
   <div class="row">
+    <div class="col-md-2">
+      <h1 class="category-h1">Уличные фонари декоративные</h1>
+    </div>
     <div class="col-md-6">
-      <h1 class="main-header">Алюминиевые маталлоконструкции из Греции от производителя</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="collapse" id="category-desc">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#category-desc" aria-expanded="false" aria-controls="collapseExample">&nbsp;</button>
     </div>
   </div>
-</section>
+</div>
 
-    <section class="container">
-  <div class="row">
-    <div class="col-md-7">
-      <div class="label-list">
-        <a class="label-link" href="#"><span class="label-link__text">Алюминиевые перила,</span></a>
-        <a class="label-link" href="#"><span class="label-link__text">Заборы,</span></a>
-        <a class="label-link" href="#"><span class="label-link__text">Балконные ограждения,</span></a>
-        <a class="label-link" href="#"><span class="label-link__text">Решетки, </span></a>
-        <a class="label-link" href="#"><span class="label-link__text">и многое другое  ...</span></a>
+    <div class="container category-filter-wrap">
+  <form class="category-filter" action="">
+    <button class="btn btn-filter collapsed d-none d-sm-block" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false">
+      <span class="under-show">Фильтры</span>
+      <span class="under-hide">Скрыть фильтр</span>
+    </button>
+    <div class="row collapse show multi-collapse" id="category-seek">
+      <div class="col-sm-5 offset-md-2">
+        <div class="btn-collection">
+          <a href="" class="btn btn-seek">Пергало деревянные</a>
+          <a href="" class="btn btn-seek">Пергало деревянные</a>
+          <a href="" class="btn btn-seek">Пергало деревянные</a>
+        </div>
       </div>
     </div>
+    <div class="category-filter__collapse collapse multi-collapse" id="category-filters">
+      <div class="row form-group">
+        <div class="col-md-2 col-lg-1 offset-lg-1 category-filter__title">Цена</div>
+        <div class="col-md-4 filter-range-wrap">
+          <div class="filter-range-item">
+            <input class="form-control form-control--range" id="price-min" type="text"><span class="ico-rub">э</span>
+          </div>
+          <div class="category-filter__range">
+            <div id="slider"></div>
+          </div>
+          <div class="filter-range-item">
+            <input class="form-control form-control--range" id="price-max" type="text"><span class="ico-rub">э</span>
+          </div>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-2 col-lg-1 offset-lg-1 category-filter__title">Тип товара </div>
+        <div class="col-md-6">
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator">
+              <span class="custom-control-ico"></span>
+            </span>
+            <span class="custom-control-description">Перила аллюминиевые</span>
+          </label>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator">
+              <span class="custom-control-ico"></span>
+            </span>
+            <span class="custom-control-description">Перила стальные</span>
+          </label>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator">
+              <span class="custom-control-ico"></span>
+            </span>
+            <span class="custom-control-description">Крепления для перил</span>
+          </label>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator">
+              <span class="custom-control-ico"></span>
+            </span>
+            <span class="custom-control-description">Уличные фонари</span>
+          </label>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator">
+              <span class="custom-control-ico"></span>
+            </span>
+            <span class="custom-control-description">Козырьки</span>
+          </label>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator">
+              <span class="custom-control-ico"></span>
+            </span>
+            <span class="custom-control-description">Ограждения</span>
+          </label>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-2 col-lg-1 offset-lg-1 category-filter__title">Область применения </div>
+        <div class="col-md-5">
+          <div class="dropdown category-filter__dropdown">
+            <button class="btn btn-drop dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Все области применения</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <label class="dropdown-item custom-control custom-checkbox" href="#">
+                <input type="checkbox" class="custom-control-input">
+                <span class="custom-control-indicator">
+                  <span class="custom-control-ico"></span>
+                </span>
+                <span class="custom-control-description">Перила стальные</span>
+              </label>
+              <label class="dropdown-item custom-control custom-checkbox" href="#">
+                <input type="checkbox" class="custom-control-input">
+                <span class="custom-control-indicator">
+                  <span class="custom-control-ico"></span>
+                </span>
+                <span class="custom-control-description">Перила стальные</span>
+              </label>
+              <label class="dropdown-item custom-control custom-checkbox" href="#">
+                <input type="checkbox" class="custom-control-input">
+                <span class="custom-control-indicator">
+                  <span class="custom-control-ico"></span>
+                </span>
+                <span class="custom-control-description">Перила стальные</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-md-2 col-lg-1 offset-lg-1"></div>
+        <div class="col-md-5">
+          <button class="btn btn-category-submit" type="button">Применить фильтры</button>
+        </div>
+      </div>
+    </div>
+    <div class="category-filter__btn-wrap d-block d-sm-none">
+      <button class="btn btn-filter collapsed" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false">
+        <span class="under-show">Фильтры</span>
+        <span class="under-hide">Скрыть фильтр</span>
+      </button>
+    </div>
+  </form>
+</div>
+
+    <div class="container">
+  <div class="row category-result">
+    <div class="col-sm-2 category-item-wrap">
+      <a class="category-item" href="#" style="background-image: url('img/test-category.png')">
+  <div class="category-item__inner">
+    <div class="category-item__title">Traditional - Railings in Classic Line</div>
+    <div class="category-item__price">от 10 234 <span class="ico-rub">₽</span></div>
   </div>
-</section>
-
-    <div class="main-grow--middle"></div>
-    <section class="container project-wrap">
-  <div class="section-title-wrap">
-    <span class="section-title">Выполненные проекты</span>
+  <div class="category-item__more">
+      Анодированные или с гальваническим покрытием. Такие перила внешне неотличимы от аналогов из нержавеющей стали.
   </div>
-  <div  class="project" id="project-slider">
+</a>
 
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-        <article class="project-item">
-  <a class="project-img-wrap" href="" >
-    <img class="project-item-img img-fluid" src="https://placehold.it/278x124" alt="">
-  </a>
-  <a class="project-item-title" href="">Резиденция Монэ Аркус</a>
-</article>
-
-
-    <article class="project-item project-item--all">
-      <a class="btn btn--project-item" href="#">
-        Все проекты
-      </a>
-    </article>
+    </div>
+    <div class="col-sm-4 category-item-wrap">
+      <a class="category-item category-item--col-2" href="#" style="background-image: url('img/test-category2.png')">
+  <div class="category-item__inner">
+    <div class="category-item__title">Traditional - Railings in Classic Line</div>
+    <div class="category-item__price">от 10 234 <span class="ico-rub">₽</span></div>
   </div>
-</section>
+  <div class="category-item__more">
+      Анодированные или с гальваническим покрытием. Такие перила внешне неотличимы от аналогов из нержавеющей стали.
+  </div>
+</a>
 
-    <div class="main-grow"></div>
+    </div>
+    <div class="col-sm-2 category-item-wrap">
+      <a class="category-item" href="#" style="background-image: url('img/test-category.png')">
+  <div class="category-item__inner">
+    <div class="category-item__title">Traditional - Railings in Classic Line</div>
+    <div class="category-item__price">от 10 234 <span class="ico-rub">₽</span></div>
+  </div>
+  <div class="category-item__more">
+      Анодированные или с гальваническим покрытием. Такие перила внешне неотличимы от аналогов из нержавеющей стали.
+  </div>
+</a>
+
+    </div>
+    <div class="col-sm-2 category-item-wrap">
+      <a class="category-item" href="#" style="background-image: url('img/test-category.png')">
+  <div class="category-item__inner">
+    <div class="category-item__title">Traditional - Railings in Classic Line</div>
+    <div class="category-item__price">от 10 234 <span class="ico-rub">₽</span></div>
+  </div>
+  <div class="category-item__more">
+      Анодированные или с гальваническим покрытием. Такие перила внешне неотличимы от аналогов из нержавеющей стали.
+  </div>
+</a>
+
+    </div>
+    <div class="col-sm-2 category-item-wrap">
+      <a class="category-item" href="#" style="background-image: url('img/test-category.png')">
+  <div class="category-item__inner">
+    <div class="category-item__title">Traditional - Railings in Classic Line</div>
+    <div class="category-item__price">от 10 234 <span class="ico-rub">₽</span></div>
+  </div>
+  <div class="category-item__more">
+      Анодированные или с гальваническим покрытием. Такие перила внешне неотличимы от аналогов из нержавеющей стали.
+  </div>
+</a>
+
+    </div>
+    <div class="col-sm-2 category-item-wrap">
+      <a class="category-item" href="#" style="background-image: url('img/test-category.png')">
+  <div class="category-item__inner">
+    <div class="category-item__title">Traditional - Railings in Classic Line</div>
+    <div class="category-item__price">от 10 234 <span class="ico-rub">₽</span></div>
+  </div>
+  <div class="category-item__more">
+      Анодированные или с гальваническим покрытием. Такие перила внешне неотличимы от аналогов из нержавеющей стали.
+  </div>
+</a>
+
+    </div>
+  </div>
+</div>
+
+    <div class="container category-toolbar">
+  <button class="btn btn-pagination"><span class="pagination-counter">10/15</span>ЗАГРУЗИТЬ ЕЩЁ</button>
+</div>
+
   </div>
   <footer class="page-footer">
     <div class="container">
@@ -219,6 +326,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
