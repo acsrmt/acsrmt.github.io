@@ -238,4 +238,12 @@ $(function () {
   $('.product-slider-prew-wrap').on('click', function (e) {
     e.stopPropagation();
   });
+
+  $('.form-transparent .form-control').on('focusin', function () {
+    $(this).parents('label').addClass('focused');
+  });
+
+  $('.form-transparent .form-control').on('focusout', function () {
+    $(this).parents('label').removeClass('focused');
+  });
 });
