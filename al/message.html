@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="none"/>
   <title>aluminco</title>
   <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/main.css">
@@ -80,14 +79,14 @@
         <div class="form-group row">
           <div class="col-sm-4">
             <label for="">
-              Как к вам обращаться?*
-              <input class="form-control" type="text" name="" value="">
+              Как к вам обращаться? *
+              <input class="form-control required alphabetic" type="text" name="fio" value="" autocomplete="off" >
             </label>
           </div>
           <div class="col-sm-3">
             <label for="">
-              Телефон*
-              <input class="form-control" type="tel" name="" value="">
+              Телефон *
+              <input class="form-control required" type="tel" name="tel" value="" autocomplete="off">
             </label>
           </div>
         </div>
@@ -95,20 +94,22 @@
           <div class="col-sm-4">
             <label for="">
               Почта
-              <input class="form-control" type="email" name="" value="">
+              <input class="form-control" type="email" name="email" value="" autocomplete="off" >
             </label>
           </div>
           <div class="col-6 col-sm-3 d-flex">
             <label class="custom-file">
               Загрузить файл
-                <input class="custom-file__input form-control" type="file" name="inputFile">
+                <input class="custom-file__input form-control" type="file" name="inputFile" id="message-file">
                 <span class="custom-file__name" data-filename=""></span>
-                <span class="custom-file__control"></span>
+                <span class="custom-file__control">
+                  <img src="img/clip.png" alt="">
+                </span>
             </label>
           </div>
           <div class="col-2 col-sm-1">
             <div class="d-flex align-items-center">
-              <button class="btn btn-round-plus" type="button" name="button">
+              <button class="btn btn-round-plus" type="button" name="button" id="message-file-btn">
                 <svg
                  xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -133,7 +134,7 @@
         </div>
         <div class="form-group">
           <label class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" checked>
+            <input type="checkbox" class="custom-control-input required" checked name="is_agreement">
             <span class="custom-control-indicator">
               <span class="custom-control-ico"></span>
             </span>
@@ -213,6 +214,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script src="js/nouislider.min.js"></script>
+  <script type="text/javascript" src="js/validate/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/validate/messages_ru.min.js"></script>
+  <script type="text/javascript" src="js/validate/jquery.mask.min.js"></script>
+  <script type="text/javascript" src="js/validate/validate.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
