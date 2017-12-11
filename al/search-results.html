@@ -15,7 +15,7 @@
   <![endif]-->
 </head>
 
-<body class="">
+<body class="page-search">
   <header class="page-header">
     <nav class="navbar">
   <div class="container">
@@ -60,52 +60,40 @@
   </div>
 </nav>
 
-    <div class="container">
-  <ul class="nav">
-    <li class="nav-item"><a class="nav-link" href="#">Перила</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Поручни</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Ограждения</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Перегородки</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Пергола</a></li>
-    <li class="nav-item active"><a class="nav-link" href="#">Уличные фонари</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Козырьки</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Вся продукция</a></li>
-  </ul>
-</div>
-
   </header>
   <div class="page-content">
-    <div class="container category-desc">
+    <div class="container category-desc-search">
   <div class="row">
     <div class="col-md-2">
-      <h1 class="page-h1">Уличные фонари декоративные</h1>
+      <h1 class="page-h1">Результат поиска</h1>
     </div>
     <div class="col-md-6">
-      <div class="category-desc-collapse" id="category-desc" style="overflow: hidden; height: 4.5rem;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <button class="btn btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#category-desc" aria-expanded="false" aria-controls="collapseExample">&nbsp;</button>
+      <form class="category-search" action="">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Поиск по сайту" aria-label="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-category-search" type="button"></button>
+          </span>
+        </div>
+        <div class="category-result-title">
+          По запросу найдено 18 результатов
+        </div>
+      </form>
     </div>
   </div>
 </div>
 
     <div class="container category-filter-wrap">
-  <form class="category-filter" action="">
-    <button class="btn btn-filter collapsed d-none d-sm-block" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false">
-      <span class="under-show">Фильтры</span>
-      <span class="under-hide">Скрыть фильтр</span>
-    </button>
-    <div class="row collapse show multi-collapse" id="category-seek">
-      <div class="col-sm-5 offset-md-2">
-        <div class="btn-collection">
-          <a href="" class="btn btn-seek">Пергало деревянные</a>
-          <a href="" class="btn btn-seek">Пергало деревянные</a>
-          <a href="" class="btn btn-seek">Пергало деревянные</a>
-        </div>
+  <form class="category-filter category-filter--search" action="">
+    <div class="row">
+      <div class="col-md-4 offset-md-2 btn-filter-wrap">
+        <button class="btn btn-filter collapsed d-none d-sm-block" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false">
+          <span class="under-show">Фильтры</span>
+          <span class="under-hide">Скрыть фильтр</span>
+        </button>
       </div>
     </div>
+
     <div class="category-filter__collapse collapse multi-collapse" id="category-filters">
       <div class="row form-group">
         <div class="col-md-2 col-lg-1 offset-lg-1 category-filter__title">Цена</div>
