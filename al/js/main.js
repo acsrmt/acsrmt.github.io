@@ -110,6 +110,23 @@ $(function () {
     }]
   });
 
+  $(document).on('click', '#projects-btn', function () {
+    $('#projects-wrap').addClass('show-desc');
+    $('#show-map-btn').removeClass('d-none');
+    $('#projects-btn').addClass('d-none');
+  });
+
+  $(document).on('click', '#show-map-btn', function () {
+    $('#projects-map-tab').tab('show');
+  });
+
+  $(document).on('click', '.projects-slider-prew-item', function () {
+    $('#show-map-btn').addClass('d-none');
+    $('#projects-btn').removeClass('d-none');
+    $('#projects-wrap').removeClass('show-desc');
+    // $('.projects-slider-content').fadeOut(1000);
+  });
+
   $('#navsearch-btn').on('click', function () {
     $('#navsearch-form').addClass('open');
     $('#navsearch-form .search-input').focus();

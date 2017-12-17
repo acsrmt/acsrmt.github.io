@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="none"/>
+  <title>aluminco</title>
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="page-projects">
+  <header class="page-header">
+    <nav class="navbar">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="nav-item nav-item-xs nav-item--brand">
+        <a class="navbar-brand" href="#">
+          <img src="img/main-logo.png" alt="Aluminco">
+        </a>
+      </li>
+      <li class="nav-item nav-item--main">
+        <a class="nav-link" href="#">Продукция</a>
+      </li>
+      <li class="nav-item nav-item--main">
+        <a class="nav-link" href="#">Проекты</a>
+      </li>
+      <li class="nav-item nav-item--main active">
+        <a class="nav-link" href="#">О нас</a>
+      </li>
+      <li class="nav-item nav-item--search nav-item-xs">
+        <button class="btn nav-link" id="navsearch-btn">
+          <span class="search-ico"></span>
+          <!-- <img src="img/search-ico.svg" alt=""> -->
+        </button>
+        <div class="search-wrap" id="navsearch-form">
+          <form class="search-form" action="/">
+            <button class="search-submit" type="submit"></button>
+            <input class="search-input" type="text" placeholder="Поиск по сайту">
+            <button class="search-close" type="button" name="button"></button>
+          </form>
+        </div>
+      </li>
+      <li class="nav-item d-none d-sm-flex">
+        <a class="nav-link" href="#">8 (495) 789-83-21</a>
+      </li>
+      <li class="nav-item d-none d-sm-flex">
+        <a class="nav-link" href="#">info@aluminco.ru</a>
+      </li>
+      <li class="nav-item nav-item-xs">
+        <a class="nav-link" href="#">Связаться с нами</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  </header>
+  <div class="page-content">
+    <div class="container projects-desc">
+  <div class="row">
+    <div class="col-md-2">
+      <h1 class="page-h1">Выполненные проекты</h1>
+    </div>
+    <div class="col-md-6">
+      <p>
+        Мы – самый опытный производитель перил из алюминия, работаем с 2006 года. За время работы сотни частных домов, офисов и коттеджей, получили лестничные ограждения из алюминия от нашей компании. Работаем с оптом и с розницой
+      </p>
+    </div>
+  </div>
+</div>
+
+<ul class="nav nav-tabs d-none" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="projects-map-tab" data-toggle="tab" href="#projects-map" role="tab" aria-controls="home" aria-selected="true"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="projects-slider-tab" data-toggle="tab" href="#projects-desc" role="tab" aria-controls="profile" aria-selected="false"></a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="projects-map" role="tabpanel">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-2">
+            <div class="row projects-filter">
+  <div class="col form-group projects-filter-wrap">
+    <span class="projects-filter__title">Тип сооружения</span>
+    <div class="dropdown category-filter__dropdown">
+      <button class="btn btn-drop dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Все области применения</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <label class="dropdown-item custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" value="1">
+          <span class="custom-control-indicator">
+            <span class="custom-control-ico"></span>
+          </span>
+          <span class="custom-control-description">Перила стальные</span>
+        </label>
+        <label class="dropdown-item custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" value="2">
+          <span class="custom-control-indicator">
+            <span class="custom-control-ico"></span>
+          </span>
+          <span class="custom-control-description">Перила стальные</span>
+        </label>
+        <label class="dropdown-item custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" value="3">
+          <span class="custom-control-indicator">
+            <span class="custom-control-ico"></span>
+          </span>
+          <span class="custom-control-description">Перила стальные</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="col form-group projects-filter-wrap">
+    <span class="projects-filter__title">Коллекция</span>
+    <div class="dropdown category-filter__dropdown">
+      <button class="btn btn-drop dropdown-toggle btn-drop--small" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Все коллекции</button>
+      <div class="dropdown-menu dropdown-menu--small ">
+        <label class="dropdown-item custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input">
+          <span class="custom-control-indicator">
+            <span class="custom-control-ico"></span>
+          </span>
+          <span class="custom-control-description">Перила стальные</span>
+        </label>
+        <label class="dropdown-item custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input">
+          <span class="custom-control-indicator">
+            <span class="custom-control-ico"></span>
+          </span>
+          <span class="custom-control-description">Перила стальные</span>
+        </label>
+        <label class="dropdown-item custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input">
+          <span class="custom-control-indicator">
+            <span class="custom-control-ico"></span>
+          </span>
+          <span class="custom-control-description">Перила стальные</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="projects-map" id="map"></div>
+  </div>
+  <div class="tab-pane fade" id="projects-desc" role="tabpanel">
+      <div class="projects-wrap show-desc" id="projects-wrap">
+  <div class="projects-backdrop"></div>
+  <div class="projects-slider-desc">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 projects-slider-btns">
+          <button class="btn btn-link d-none" type="button" name="button" id="projects-btn"> К описанию объекта </button>
+          <button class="btn btn-link" type="button" name="button" id="show-map-btn"> Вернутья к карте </button>
+        </div>
+        <div class="col-md-6 offset-md-2 projects-slider-content">
+          <div class="projects-slider-head">
+            <div class="projects-header-wrap">
+              <div class="projects-header">
+                <h2>Лестница в частном доме</h2>
+                <span class="project-slider-paging"></span>
+              </div>
+              <div class="projects-header-address">Москва, Ленинский проспект</div>
+            </div>
+          </div>
+          <div class="projects-slider-body">
+            <div class="projects-slider-prew slider-init" id="projects-slider-prew">
+              <div class="projects-slider-prew-item">
+                <img class="img-fluid" src="https://placehold.it/162x100?text=1" alt="" ></div>
+              <div class="projects-slider-prew-item">
+                <img class="img-fluid" src="https://placehold.it/162x100?text=2" alt="" ></div>
+              <div class="projects-slider-prew-item">
+                <img class="img-fluid" src="https://placehold.it/162x100?text=3" alt="" ></div>
+              <div class="projects-slider-prew-item">
+                <img class="img-fluid" src="https://placehold.it/162x100?text=4" alt=""></div>
+              <div class="projects-slider-prew-item">
+                <img class="img-fluid" src="https://placehold.it/162x100?text=5" alt="" ></div>
+              <div class="projects-slider-prew-item">
+                <img class="img-fluid" src="https://placehold.it/162x100?text=6" alt="" ></div>
+              <div class="projects-slider-prew-item">
+                <img class="img-fluid" src="https://placehold.it/162x100?text=7" alt="" ></div>
+            </div>
+            <p>
+              Выбор материала для будущих перил зависит от многих факторов, начиная от дизайнерского замысла и заканчивая особенностями монтажных работ. Но, следует отметить, что одним из самых популярных материалов для перил является алюминий. Рассмотрим, какие качества делают ограждения из этого металла привлекательными и востребованными на рынке.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="projects-slider slider-init" id="projects-slider">
+    <div class="slick-item-bg" style="background-image: url(img/projects/1.png)"></div>
+    <div class="slick-item-bg" style="background-image: url(https://placehold.it/740x510?text=2)"></div>
+    <div class="slick-item-bg" style="background-image: url(https://placehold.it/740x510?text=3)"></div>
+    <div class="slick-item-bg" style="background-image: url(https://placehold.it/740x510?text=4)"></div>
+    <div class="slick-item-bg" style="background-image: url(https://placehold.it/740x510?text=5)"></div>
+    <div class="slick-item-bg" style="background-image: url(https://placehold.it/740x510?text=6)"></div>
+    <div class="slick-item-bg" style="background-image: url(https://placehold.it/740x510?text=7)"></div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+  <ul class="navbar-footer">
+    <li class="nav-item d-block d-sm-none">
+      <a href="mailto:info@aluminco.ru" class="nav-link">info@aluminco.ru</a>
+    </li>
+    <li class="nav-item d-block d-sm-none">
+      <a href="tel:+74957898321" class="nav-link">8 (495) 789-83-21</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Документация</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Контакты</a>
+    </li>
+    <li class="nav-item credit-thumb">
+      <a href="#" class="nav-link">Дизайн и продвижение сайта <img src="img/lp/i-m-just.png" alt=""></a>
+    </li>
+  </ul>
+</div>
+
+  </footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="//api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script>
+  <script type="text/javascript" src="js/all.js"></script>
+  <script type="text/javascript" src="js/projects-map.js"></script>
+
+</body>
+
+</html>
