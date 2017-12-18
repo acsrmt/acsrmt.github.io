@@ -230,6 +230,15 @@ function init() {
 
     objectManager.add(dataJson);
 
+    // $('[data-toggle="tab"]').on('hide.bs.tab', function (e) {
+    //   if($('#projects-slider').length && $('#projects-slider').hasClass('slick-initialized')) {
+    //     $('#projects-slider').slick('unslick');
+    //   }
+    //   if($('#projects-slider-prew').length && $('#projects-slider-prew').hasClass('slick-initialized')) {
+    //     $('#projects-slider-prew').slick('unslick');
+    //   }
+    // });
+
     $(document).on('click', '.map-popover-link', function (e) {
         e.preventDefault();
         //ajax here
@@ -237,30 +246,34 @@ function init() {
         //should be before slick init
         //
         //init after ajax success and insert content
-        $('#projects-slider').on('init reInit afterChange', function(event, slick, currentSlide) {
-          var i = (currentSlide ? currentSlide : 0) + 1;
-          $('.project-slider-paging').text(i + ' / ' + slick.slideCount);
-        });
+
 
         $('#projects-slider').on('init reInit', function(event, slick, currentSlide) {
 
         });
 
+
         $('[data-toggle="tab"]').on('shown.bs.tab', function (e) {
             console.log('show tab toggled');
-            $('#projects-slider').slick({
-              mobileFirst: true,
-              infinite: false,
-              speed: 300,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              asNavFor: '#projects-slider-prew',
-              focusOnSelect: true,
-              accessibility: false,
-              fade: true
+            $('#projects-slider').on('init reInit afterChange', function(event, slick, currentSlide) {
+              var i = (currentSlide ? currentSlide : 0) + 1;
+              $('.project-slider-paging').text(i + ' / ' + slick.slideCount);
             });
+            if(!$('#projects-slider').hasClass('slick-initialized')) {
+              $('#projects-slider').slick({
+                mobileFirst: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '#projects-slider-prew',
+                focusOnSelect: true,
+                accessibility: false,
+                fade: true
+              });
+            }
 
-
+          if(!$('#projects-slider-prew').hasClass('slick-initialized')) {
             $('#projects-slider-prew').slick({
               mobileFirst: true,
               infinite: false,
@@ -286,8 +299,9 @@ function init() {
                 }
               }]
             });
-            $('.tab-pane .slider-init').slick('setPosition');
-        });
+            // $('.tab-pane .slider-init').slick('setPosition');
+      }
+    });
 
 
 
