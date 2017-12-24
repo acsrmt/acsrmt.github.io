@@ -63,10 +63,10 @@
   <div class="page-content">
     <ul class="nav nav-tabs d-none" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="message-tab" data-toggle="tab" href="#message" role="tab" aria-controls="home" aria-selected="true">Home</a>
+    <a class="nav-link active" id="message-tab" data-toggle="tab" href="#message" role="tab" aria-controls="home" aria-selected="true"></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="message-finish-tab" data-toggle="tab" href="#message-finish" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+    <a class="nav-link" id="message-finish-tab" data-toggle="tab" href="#message-finish" role="tab" aria-controls="profile" aria-selected="false"></a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -80,13 +80,13 @@
           <div class="col-sm-4">
             <label for="">
               Как к вам обращаться? *
-              <input class="form-control required alphabetic" type="text" name="fio" value="" autocomplete="off" >
+              <input class="form-control required alphabetic form-control--xl" type="text" name="fio" value="" autocomplete="off" >
             </label>
           </div>
           <div class="col-sm-3">
             <label for="">
               Телефон *
-              <input class="form-control required" type="tel" name="tel" value="" autocomplete="off">
+              <input class="form-control required form-control--xl" type="tel" name="tel" value="" autocomplete="off">
             </label>
           </div>
         </div>
@@ -94,31 +94,29 @@
           <div class="col-sm-4">
             <label for="">
               Почта
-              <input class="form-control" type="email" name="email" value="" autocomplete="off" >
+              <input class="form-control form-control--xl" type="email" name="email" value="" autocomplete="off" >
             </label>
           </div>
           <div class="col-6 col-sm-3 d-flex">
             <label class="custom-file">
               Загрузить файл
                 <input class="custom-file__input form-control" type="file" name="inputFile" id="message-file">
-                <span class="custom-file__name" data-filename=""></span>
+                <span class="custom-file__name"></span>
                 <span class="custom-file__control">
                   <img src="img/clip.png" alt="">
                 </span>
             </label>
           </div>
           <div class="col-2 col-sm-1">
-            <div class="d-flex align-items-center">
-              <button class="btn btn-round-plus" type="button" name="button" id="message-file-btn">
-                <svg
-                 xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                 width="25px" height="25px">
-                <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                 d="M25.000,13.000 L13.000,13.000 L13.000,25.000 L12.000,25.000 L12.000,13.000 L-0.000,13.000 L-0.000,12.000 L12.000,12.000 L12.000,-0.000 L13.000,-0.000 L13.000,12.000 L25.000,12.000 L25.000,13.000 Z"/>
-                </svg>
-              </button>
-            </div>
+            <button class="btn btn-round-plus" type="button" name="button" id="message-file-btn">
+              <svg
+               xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               width="25px" height="25px">
+              <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+               d="M25.000,13.000 L13.000,13.000 L13.000,25.000 L12.000,25.000 L12.000,13.000 L-0.000,13.000 L-0.000,12.000 L12.000,12.000 L12.000,-0.000 L13.000,-0.000 L13.000,12.000 L25.000,12.000 L25.000,13.000 Z"/>
+              </svg>
+            </button>
           </div>
         </div>
         <div class="form-group row">
