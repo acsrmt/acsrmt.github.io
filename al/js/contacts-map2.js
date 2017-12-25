@@ -26,18 +26,16 @@ ymaps.ready(function () {
 
     var html = '<div class="contacts-popup">';
     html += '<div class="contacts-popup__body">';
-    html += '<img src="img/logo-big2.png" alt="" />';
+    html += '<img src="img/logo-big.png" alt="" />';
     html += '</div>';
-    html += '<a class="contacts-popup__footer" href="https://yandex.ru">Проложить к нам маршрут</a>';
+    // html +=    '<a class="contacts-popup__footer" href="https://yandex.ru">Проложить к нам маршрут</a>';
     html += '<div class="arrow"></div>';
     html += '</div>';
 
     var myPlacemark = new ymaps.Placemark([55.67333606906274, 37.63246649999992], {
         balloonContent: html
-    }, { iconLayout: 'default#image',
-        iconImageHref: 'http://blog.karmanov.ws/files/APIYaMaps1/min_marker.png',
-        iconImageSize: [40, 51],
-        iconImageOffset: [-20, -47],
+    }, {
+        balloonOffset: [30, -30],
         balloonLayout: "default#imageWithContent",
         balloonContentSize: [289, 151],
         balloonPanelMaxMapArea: 0
@@ -47,7 +45,6 @@ ymaps.ready(function () {
 
     var routeButton = new ymaps.control.RouteButton({
         options: {
-            size: "small",
             visible: true
         }
     });

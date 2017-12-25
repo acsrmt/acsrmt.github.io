@@ -30,7 +30,7 @@ $(function () {
   $(window).on('resize', function () {
     if ($(window).width() < 1024) {
       if (projectSlider.hasClass('slick-initialized')) {
-        // projectSlider.slick('slickUnfilter');
+        projectSlider.slick('slickUnfilter');
         projectSlider.slick('unslick');
       }
       return;
@@ -38,7 +38,7 @@ $(function () {
 
     if (!projectSlider.hasClass('slick-initialized')) {
       projectSlider.slick(settings);
-      // projectSlider.slick('slickFilter',':not(.project-item--all)');
+      projectSlider.slick('slickFilter', ':not(.project-item--all)');
     }
   }).resize();
 
