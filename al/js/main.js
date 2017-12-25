@@ -1,6 +1,7 @@
 'use strict';
 
 $(function () {
+  //main page slider
   var projectSlider = $('#project-slider');
   var projectSliderContacts = $('#project-slider-contacts');
   var settings = {
@@ -23,9 +24,6 @@ $(function () {
       settings: "unslick"
     }]
   };
-
-  // projectSlider.slick(settings);
-  // projectSliderContacts.slick(settingsContacts);
 
   $(window).on('resize', function () {
     if ($(window).width() < 1024) {
@@ -55,6 +53,7 @@ $(function () {
     }
   }).resize();
 
+  //product sliders
   $('#product-slider').slick({
     mobileFirst: true,
     infinite: false,
@@ -83,8 +82,6 @@ $(function () {
     asNavFor: '#product-slider',
     focusOnSelect: true,
     accessibility: false,
-    // centerMode: true,
-    // centerPadding: 0,
     initialSlide: 3,
     responsive: [{
       breakpoint: 768,
@@ -110,6 +107,7 @@ $(function () {
     }]
   });
 
+  //projects page
   $(document).on('click', '#projects-btn', function () {
     $('#projects-wrap').addClass('show-desc');
     $('#show-map-btn').removeClass('d-none');
@@ -124,9 +122,9 @@ $(function () {
     $('#show-map-btn').addClass('d-none');
     $('#projects-btn').removeClass('d-none');
     $('#projects-wrap').removeClass('show-desc');
-    // $('.projects-slider-content').fadeOut(1000);
   });
 
+  //header serach panel
   $('#navsearch-btn').on('click', function () {
     $('#navsearch-form').addClass('open');
     $('#navsearch-form .search-input').focus();
@@ -144,13 +142,13 @@ $(function () {
   });
 
   $(document).on('click touch', function (e) {
-    // console.log($('#navsearch-form').length, $(e.target).attr('id') !== 'navsearch-btn', $(e.target).hasClass('search-ico'));
     if ($('#navsearch-form').length && $(e.target).attr('id') !== 'navsearch-btn' && !$(e.target).hasClass('search-ico')) {
       $('#navsearch-form').removeClass('open');
       $('.page-header .navbar-nav').removeClass('search-open');
     }
   });
 
+  //category range filter
   var slider = document.getElementById('slider');
 
   if (slider) {
@@ -188,6 +186,7 @@ $(function () {
     });
   }
 
+  //custom file input
   $("input[type=file]").change(function (e) {
     var fileName = [],
         fieldVal = this,
@@ -206,6 +205,7 @@ $(function () {
     }
   });
 
+  //category desc
   $('#category-desc').on('hidden.bs.collapse', function () {
     $('#category-desc').removeClass('collapse').css({
       'overflow': 'hidden',
@@ -217,10 +217,11 @@ $(function () {
     $(this).addClass('loader').prop('disabled', true);
     var content = $('.category-result').html();
     $('.category-result').append("<div id='ajax-catalog-loader' style='position:absolute;top:0px;left:0px;right:0;bottom:0px;background:white;margin:0px;-moz-opacity:.80;filter:alpha(opacity=80);opacity:0.8;z-index:4'></div>");
+
+    //emulate ajax timeout
     setTimeout(function () {
       $('.category-result').append(content);
       $('#category-show-more').removeClass('loader').prop('disabled', false);
-      console.log($('#ajax-catalog-loader').length);
       $('#ajax-catalog-loader').remove();
     }, 2000);
   });
@@ -228,21 +229,16 @@ $(function () {
   if ($('[data-fancybox]').length) {
     $('[data-fancybox]').fancybox({
       loop: false,
-      // toolbar: false,
       infobar: false,
-      // buttons: false,
-      // arrows : false,
       btnTpl: {
         slideShow: false,
         fullScreen: false,
         thumbs: false,
-        // close: true,
-        // smallBtn: true,
         share: false,
-        arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' + '<img src="img/arrow-dark.svg" alt="">' + '</button>',
+        arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' + '<span class="al icon-arrow-dark-prev"></span>' + '</button>',
 
-        arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' + '<img src="img/arrow-dark.svg" alt="">' + '</button>',
-        close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' + '<img class="img-fluid" src="img/search-ico-close-dark.svg" alt="">' + '</button>'
+        arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' + '<span class="al icon-arrow-next-light "></span>' + '</button>',
+        close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}">' + '<span class="al icon-close-light"></span>' + '</button>'
       },
       thumbs: {
         autoStart: true,
@@ -251,6 +247,7 @@ $(function () {
     });
   }
 
+  //message form validate and sumbit
   $('#message-form').validate({
     rules: {
       fio: {
