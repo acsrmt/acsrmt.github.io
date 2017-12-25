@@ -5,14 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="none"/>
   <title>aluminco</title>
   <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="css/main.css">
-  <!--[if lte IE 8]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 </head>
 
 <body class="page-search">
@@ -99,13 +94,13 @@
         <div class="col-md-2 col-lg-1 offset-lg-1 category-filter__title">Цена</div>
         <div class="col-md-4 filter-range-wrap">
           <div class="filter-range-item">
-            <input class="form-control form-control--range" id="price-min" type="text">₽
+            <input class="form-control form-control--range" id="price-min" type="text">
           </div>
           <div class="category-filter__range">
             <div id="slider"></div>
           </div>
           <div class="filter-range-item">
-            <input class="form-control form-control--range" id="price-max" type="text">₽
+            <input class="form-control form-control--range" id="price-max" type="text">
           </div>
         </div>
       </div>
@@ -277,11 +272,23 @@
 </a>
 
     </div>
+    <div class="col-sm-2 category-item-wrap">
+      <a class="category-item" href="#" style="background-image: url('img/test-category.png')">
+  <div class="category-item__inner">
+    <div class="category-item__title">Traditional - Railings in Classic Line</div>
+    <div class="category-item__price">от 10 234 ₽</div>
+  </div>
+  <div class="category-item__more">
+      Анодированные или с гальваническим покрытием. Такие перила внешне неотличимы от аналогов из нержавеющей стали.
+  </div>
+</a>
+
+    </div>
   </div>
 </div>
 
     <div class="container category-toolbar">
-  <button class="btn btn-pagination"><span class="pagination-counter">10/15</span>ЗАГРУЗИТЬ ЕЩЁ</button>
+  <button class="btn btn-pagination" id="category-show-more"><span class="pagination-counter">10/15</span>ЗАГРУЗИТЬ ЕЩЁ</button>
 </div>
 
   </div>
