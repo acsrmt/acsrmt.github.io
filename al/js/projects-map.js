@@ -1,3 +1,4 @@
+//test data
 var dataJson = {
   "type": "FeatureCollection",
   "features": [
@@ -85,140 +86,82 @@ function init() {
 
 //*****
   MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
-            '<div class="product-baloon">' +
-                '$[[options.contentLayout observeSize minWidth=150 maxWidth=140 minHeight=96]]' +
-                '</div>', {
-                /**
-                 * Строит экземпляр макета на основе шаблона и добавляет его в родительский HTML-элемент.
-                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#build
-                 * @function
-                 * @name build
-                 */
-                build: function () {
-                    this.constructor.superclass.build.call(this);
+    '<div class="product-baloon">' +
+        '$[[options.contentLayout observeSize minWidth=150 maxWidth=140 minHeight=96]]' +
+        '</div>', {
+        build: function () {
+            this.constructor.superclass.build.call(this);
 
-                    this._$element = $('.product-baloon', this.getParentElement());
+            this._$element = $('.product-baloon', this.getParentElement());
 
-                    this.applyElementOffset();
+            this.applyElementOffset();
 
-                    this._$element.find('.close')
-                        .on('click', $.proxy(this.onCloseClick, this));
-                },
+            this._$element.find('.close')
+                .on('click', $.proxy(this.onCloseClick, this));
+        },
 
-                /**
-                 * Удаляет содержимое макета из DOM.
-                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/layout.templateBased.Base.xml#clear
-                 * @function
-                 * @name clear
-                 */
-                clear: function () {
-                    this._$element.find('.close')
-                        .off('click');
+        clear: function () {
+            this._$element.find('.close')
+                .off('click');
 
-                    this.constructor.superclass.clear.call(this);
-                },
+            this.constructor.superclass.clear.call(this);
+        },
 
-                /**
-                 * Метод будет вызван системой шаблонов АПИ при изменении размеров вложенного макета.
-                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-                 * @function
-                 * @name onSublayoutSizeChange
-                 */
-                onSublayoutSizeChange: function () {
-                    MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+        onSublayoutSizeChange: function () {
+            MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
 
-                    if(!this._isElement(this._$element)) {
-                        return;
-                    }
+            if(!this._isElement(this._$element)) {
+                return;
+            }
 
-                    this.applyElementOffset();
+            this.applyElementOffset();
 
-                    this.events.fire('shapechange');
-                },
+            this.events.fire('shapechange');
+        },
 
-                /**
-                 * Сдвигаем балун, чтобы "хвостик" указывал на точку привязки.
-                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-                 * @function
-                 * @name applyElementOffset
-                 */
-                applyElementOffset: function () {
-                    this._$element.css({
-                        left: -(this._$element[0].offsetWidth / 2),
-                        top: -(this._$element[0].offsetHeight)
-                    });
-                },
-
-                /**
-                 * Закрывает балун при клике на крестик, кидая событие "userclose" на макете.
-                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/IBalloonLayout.xml#event-userclose
-                 * @function
-                 * @name onCloseClick
-                 */
-                onCloseClick: function (e) {
-                    e.preventDefault();
-
-                    this.events.fire('userclose');
-                },
-
-                /**
-                 * Используется для автопозиционирования (balloonAutoPan).
-                 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ILayout.xml#getClientBounds
-                 * @function
-                 * @name getClientBounds
-                 * @returns {Number[][]} Координаты левого верхнего и правого нижнего углов шаблона относительно точки привязки.
-                 */
-                getShape: function () {
-                    if(!this._isElement(this._$element)) {
-                        return MyBalloonLayout.superclass.getShape.call(this);
-                    }
-
-                    var position = this._$element.position();
-                    console.log("position:", position);
-                    console.log(position.left, position.top, position.left + this._$element[0].offsetWidth);
-                    return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
-                        [position.left, position.top], [
-                            position.left + this._$element[0].offsetWidth,
-                            position.top + this._$element[0].offsetHeight
-                        ]
-                    ]));
-                },
-
-                /**
-                 * Проверяем наличие элемента (в ИЕ и Опере его еще может не быть).
-                 * @function
-                 * @private
-                 * @name _isElement
-                 * @param {jQuery} [element] Элемент.
-                 * @returns {Boolean} Флаг наличия.
-                 */
-                _isElement: function (element) {
-                    return element && element[0];
-                }
+        applyElementOffset: function () {
+            this._$element.css({
+                left: -(this._$element[0].offsetWidth / 2),
+                top: -(this._$element[0].offsetHeight)
             });
-//*****
+        },
+
+        onCloseClick: function (e) {
+            e.preventDefault();
+
+            this.events.fire('userclose');
+        },
+
+        getShape: function () {
+            if(!this._isElement(this._$element)) {
+                return MyBalloonLayout.superclass.getShape.call(this);
+            }
+
+            var position = this._$element.position();
+            console.log("position:", position);
+            console.log(position.left, position.top, position.left + this._$element[0].offsetWidth);
+            return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+                [position.left, position.top], [
+                    position.left + this._$element[0].offsetWidth,
+                    position.top + this._$element[0].offsetHeight
+                ]
+            ]));
+        },
+
+        _isElement: function (element) {
+            return element && element[0];
+        }
+    });
+
 
     // Чтобы задать опции одиночным объектам и кластерам,
     // обратимся к дочерним коллекциям ObjectManager.
     objectManager.objects.options.set({
-     // Опции.
-        // Необходимо указать данный тип макета.
-        // iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        // iconImageHref: 'http://www.jonedmiston.com/wp-content/uploads/2012/09/octocat.png',
-        // Размеры метки.
-        // iconImageSize: [30, 42],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        // iconImageOffset: [-3, -42],
         balloonLayout: MyBalloonLayout,
         balloonPanelMaxMapArea: 0,
         balloonAutoPan: true
     });
-    // objectManager.clusters.options.set('preset', 'islands#invertedVioletClusterIcons');
     myMap.geoObjects.add(objectManager);
-    // objectManager.setFilter('properties.qq == "3"');
-
 
     $('.custom-control-input').on('input change click', function (e) {
       var objectId = $(this).is(':checked') ? $(this).val() : '';
@@ -230,80 +173,67 @@ function init() {
 
     objectManager.add(dataJson);
 
-    // $('[data-toggle="tab"]').on('hide.bs.tab', function (e) {
-    //   if($('#projects-slider').length && $('#projects-slider').hasClass('slick-initialized')) {
-    //     $('#projects-slider').slick('unslick');
-    //   }
-    //   if($('#projects-slider-prew').length && $('#projects-slider-prew').hasClass('slick-initialized')) {
-    //     $('#projects-slider-prew').slick('unslick');
-    //   }
-    // });
-
-    $(document).on('click', '.map-popover-link', function (e) {
-        e.preventDefault();
-        //ajax here
-        $('#projects-slider-tab').tab('show');
-        //should be before slick init
-        //
-        //init after ajax success and insert content
+    $(document).on('click', '.map-popover-link', function(e) {
+      e.preventDefault();
+      //ajax here
+      $('#projects-slider-tab').tab('show');
+      //should be before slick init
+      //
+      //init after ajax success and insert content
 
 
-        $('#projects-slider').on('init reInit', function(event, slick, currentSlide) {
+      $('#projects-slider').on('init reInit', function(event, slick, currentSlide) {
 
+      });
+
+
+      $('[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        console.log('show tab toggled');
+        $('#projects-slider').on('init reInit afterChange', function(event, slick, currentSlide) {
+          var i = (currentSlide ? currentSlide : 0) + 1;
+          $('.project-slider-paging').text(i + ' / ' + slick.slideCount);
         });
+        if (!$('#projects-slider').hasClass('slick-initialized')) {
+          $('#projects-slider').slick({
+            mobileFirst: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '#projects-slider-prew',
+            focusOnSelect: true,
+            accessibility: false,
+            fade: true
+          });
+        }
 
-
-        $('[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            console.log('show tab toggled');
-            $('#projects-slider').on('init reInit afterChange', function(event, slick, currentSlide) {
-              var i = (currentSlide ? currentSlide : 0) + 1;
-              $('.project-slider-paging').text(i + ' / ' + slick.slideCount);
-            });
-            if(!$('#projects-slider').hasClass('slick-initialized')) {
-              $('#projects-slider').slick({
-                mobileFirst: true,
-                infinite: false,
-                speed: 300,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                asNavFor: '#projects-slider-prew',
-                focusOnSelect: true,
-                accessibility: false,
-                fade: true
-              });
-            }
-
-          if(!$('#projects-slider-prew').hasClass('slick-initialized')) {
-            $('#projects-slider-prew').slick({
-              mobileFirst: true,
-              infinite: false,
-              speed: 300,
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              asNavFor: '#projects-slider',
-              focusOnSelect: true,
-              accessibility: false,
-              arrows: false,
-              swipe: false,
-              responsive: [{
-                breakpoint: 767,
-                settings: {
-                  slidesToShow: 4,
-                  slidesToScroll: 1
-                }
-              }, {
-                breakpoint: 1199,
-                settings: {
-                  slidesToShow: 5,
-                  slidesToScroll: 1
-                }
-              }]
-            });
-            // $('.tab-pane .slider-init').slick('setPosition');
-      }
-    });
-
-
-
+        if (!$('#projects-slider-prew').hasClass('slick-initialized')) {
+          $('#projects-slider-prew').slick({
+            mobileFirst: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '#projects-slider',
+            focusOnSelect: true,
+            accessibility: false,
+            arrows: false,
+            swipe: false,
+            responsive: [{
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1
+              }
+            }, {
+              breakpoint: 1199,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+              }
+            }]
+          });
+        }
+      });
     });
 }

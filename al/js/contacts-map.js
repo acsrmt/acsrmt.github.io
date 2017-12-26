@@ -1,5 +1,3 @@
-'use strict';
-
 ymaps.ready(function () {
     var myMap = new ymaps.Map('contact-map', {
         center: [55.67333606906274, 37.63456649999992],

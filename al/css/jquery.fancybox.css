@@ -731,12 +731,12 @@ p.fancybox-share__links {
   float: left;
   overflow: hidden;
   padding: 0;
-  margin: 2px 8px;
-  width: 100px;
-  height: 75px;
-  max-width: calc(50% - 4px);
-  max-height: calc(100% - 8px);
-  box-shadow: 0 0 2px rgba(28,41,55,.2);
+  padding: 6px 8px;
+  width: 110px;
+  height: 85px;
+  /* max-width: calc(50% - 4px);
+  max-height: calc(100% - 8px); */
+  /* box-shadow: 0 0 2px rgba(28,41,55,.2); */
   border-radius: 5px;
   position: relative;
   cursor: pointer;
@@ -751,18 +751,19 @@ li.fancybox-thumbs-loading {
 
 .fancybox-thumbs > ul > li > img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 4px;
+  left: 10px;
   border-radius: 5px;
-  max-width: none;
-  max-height: none;
-  /* box-shadow: 0 0 2px rgba(28,41,55,.2); */
+  max-width: calc(100% - 12px);
+  max-height: calc(100% - 12px);
+  box-shadow: 0 0 2px rgba(28,41,55,.2);
+  margin: 0!important;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-.fancybox-thumbs > ul > li.fancybox-thumbs-active {
+.fancybox-thumbs > ul > li.fancybox-thumbs-active img {
     box-shadow: 0 0 6px #697480;
 }
 

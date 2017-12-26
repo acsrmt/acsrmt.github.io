@@ -247,44 +247,6 @@ $(function () {
     });
   }
 
-  //message form validate and sumbit
-  $('#message-form').validate({
-    rules: {
-      fio: {
-        minlength: 2,
-        maxlength: 50,
-        required: true,
-        alphabetic: true
-      },
-      tel: {
-        required: true
-      },
-      email: {
-        email: true
-      },
-      is_agreement: {
-        required: true
-      }
-    },
-    submitHandler: function submitHandler(form) {
-      var form = $('#message-form');
-      var data = form.serialize();
-
-      //on ajax success show message-finish
-      $('#message-finish-tab').tab('show');
-      // $.ajax({
-      //     type: 'POST',
-      //     url: '/',
-      //     // dataType: 'json',
-      //     data: data,
-      // })
-      // .done(function(result) {
-      // })
-      // .fail(function() {
-      // });
-    }
-  });
-
   $('#message-finish-close').on('click', function () {
     $('#message-tab').tab('show');
     $('#message-form')[0].reset();
