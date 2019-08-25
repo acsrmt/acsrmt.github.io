@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preload" href="./css/main.css" as="style">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="page-header">
+        <section class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark header-nav">
+        <a class="navbar-brand" href="#">LOGO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lorem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lorem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lorem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lorem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <li class="nav-item nav-item--sign">
+                    <a class="btn btn-outline-nav" href="#">Sign In</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        EN
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">EN</a>
+                        <a class="dropdown-item" href="#">RU</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+        <section class="header-info container">
+    <h1 class="header-info__header">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec egestas massa ac accumsan fringilla
+    </h1>
+    <div class="header-info__title">Proin nunc lacus, tristique nec ante vitae, porttitor condimentum urna.</div>
+    <a class="btn btn-default btn-lg" href="#">Lorem Ipsum</a>
+</section>
+
+    </header>
+    <main class="page-main">
+        <section class="advantages">
+    <div class="container row">
+        <div class="col-sm-6 col-lg-3 advantages-item">
+            <div class="advantages-item__bg">
+                <img class="advantages-item__img" src="./img/advantages-4.svg" alt="">
+            </div>
+            <div class="advantages-item__title">Donec egestas massa ac accumsan fringilla</div>
+        </div>
+        <div class="col-sm-6 col-lg-3 advantages-item">
+            <div class="advantages-item__bg">
+                <img class="advantages-item__img" src="./img/advantages-3.svg" alt="">
+            </div>
+            <div class="advantages-item__title">Donec egestas massa ac accumsan fringilla</div>
+        </div>
+        <div class="col-sm-6 col-lg-3 advantages-item">
+            <div class="advantages-item__bg">
+                <img class="advantages-item__img" src="./img/advantages-1.svg" alt="">
+            </div>
+            <div class="advantages-item__title">Donec egestas massa ac accumsan fringilla</div>
+        </div>
+        <div class="col-sm-6 col-lg-3 advantages-item">
+            <div class="advantages-item__bg">
+                <img class="advantages-item__img" src="./img/advantages-2.png" alt="">
+            </div>
+            <div class="advantages-item__title">Donec egestas massa ac accumsan fringilla</div>
+        </div>
+    </div>
+</section>
+
+        <section class="exchange-wrap">
+    <div class="container exchange">
+        <form class="exchange-form">
+            <div class="exchange-form__item exchange-form__item--xl">
+                <select class="custom-select-bs form-control form-control-lg">
+                    <option selected data-content="<img class='custom-select-img' src='./img/countrys-flags-ru.png'> Russia"></option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="exchange-form__item">
+                <select class="custom-select-bs form-control form-control-lg">
+                    <option selected>USD</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="exchange-form__item">
+                <input type="text" class="form-control form-control-lg" placeholder="" value="200">
+            </div>
+            <div class="exchange-form__item">
+                <select class="custom-select-bs form-control form-control-lg">
+                    <option selected>USD</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="exchange-form__item">
+                <input type="text" class="form-control form-control-lg" placeholder="" value="200">
+            </div>
+            <button class="btn btn-default btn-lg exchange-form__btn" type="submit">Lorem Ipsum</button>
+        </form>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        $('.custom-select-bs').selectpicker({
+            styleBase: '',
+            style: 'form-control form-control-lg',
+            width: '100%'
+        });
+    });
+</script>
+
+    </main>
+    <footer class="page-footer">
+        <section class="container">
+    <div class="row">
+        <div class="col-sm-6 col-lg-4 footer-copyright">
+            © 2018 Lorem Ipsum <br>
+            All Rights Reserved
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="footer-title">Lorem Ipsum</div>
+            <ul class="custom-list">
+                <li class="custom-list__item">1</li>
+                <li class="custom-list__item">2</li>
+                <li class="custom-list__item">3</li>
+                <li class="custom-list__item">4</li>
+                <li class="custom-list__item">5</li>
+                <li class="custom-list__item">6</li>
+            </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="footer-title">Lorem Ipsum</div>
+            <ul class="custom-list">
+                <li class="custom-list__item">1</li>
+                <li class="custom-list__item">2</li>
+                <li class="custom-list__item">3</li>
+                <li class="custom-list__item">4</li>
+            </ul>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+            <div class="footer-title">Lorem Ipsum</div>
+            <ul class="custom-list">
+                <li class="custom-list__item">Address</li>
+                <li class="custom-list__item">Address</li>
+                <li class="custom-list__item">Address</li>
+                <li class="custom-list__item">Address</li>
+            </ul>
+
+            <a class="footer-mail" href="mailto:email@imfo.com">email@imfo.com</a>
+            <div class="socic-list">
+                <a class="socic-list__item" href="#">
+                    <svg class="socic-list__img" xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20" fill="#fff"><g><g><path d="M.337 10.651h2.29v9.026c0 .178.151.322.338.322h3.883a.33.33 0 0 0 .338-.322v-8.983h2.633a.332.332 0 0 0 .335-.286l.4-3.323a.313.313 0 0 0-.084-.25.344.344 0 0 0-.251-.109H7.186V4.643c0-.628.353-.946 1.05-.946h1.983a.33.33 0 0 0 .337-.323V.324a.33.33 0 0 0-.337-.322H7.486A2.223 2.223 0 0 0 7.36 0c-.475 0-2.123.089-3.425 1.235-1.443 1.27-1.242 2.791-1.194 3.055v2.436H.337A.33.33 0 0 0 0 7.048v3.28a.33.33 0 0 0 .337.323z"/></g></g></svg>
+                </a>
+                <a class="socic-list__item" href="#">
+                    <svg class="socic-list__img" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="#fff"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a class="socic-list__item" href="#">
+                    <svg class="socic-list__img" xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="#fff"><g><g><path d="M.557 8.056L19.6.769a.545.545 0 0 1 .732.617L16.914 17.69a.548.548 0 0 1-.857.328l-4.665-3.36a.776.776 0 0 0-.94.026l-2.586 2.092a.548.548 0 0 1-.868-.26L5.202 10.79.562 9.07a.541.541 0 0 1-.005-1.015zm5.753 2.837l.98 3.418c.07.242.424.217.458-.034l.255-1.873c.048-.353.218-.678.48-.921l7.484-6.9c.14-.13-.027-.348-.19-.249l-9.068 5.54a.902.902 0 0 0-.4 1.02z"/></g></g></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row footer-bottom">
+        <div class="col-md-8 col-lg-10 footer-info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas massa ac accumsan fringilla. Morbi interdum efficitur ex vitae elementum.
+            Curabitur erat massa, hendrerit non aliquet eget, convallis at magna. Aliquam aliquet neque in aliquam gravida. Proin nunc lacus, tristique nec ante vitae, porttitor condimentum urna. V
+            ivamus nec mauris et metus lacinia elementum. Praesent ut augue eros.
+        </div>
+        <div class="col-md-4 col-lg-2">
+            <div class="payment-list">
+                <div class="payment-list__item"><img src="./img/visa.png" alt=""></div>
+                <div class="payment-list__item"><img src="./img/msc.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+</body>
+
+</html>
